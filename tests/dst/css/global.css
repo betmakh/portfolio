@@ -1,0 +1,29 @@
+.banner .content,.text-center,header nav .nav-wrapper{text-align:center}
+body{background:#EEE}
+.clearfix:after,.clearfix:before{content:" ";display:table}
+.clearfix:after{clear:both}
+.pull-right{display:block;float:right}
+.pull-left{display:block;float:left}
+.jumbotron{padding:20px;background:#fff;border-radius:3px}
+.jumbotron+*{margin-top:20px}
+textarea{max-width:100%}
+header nav{position:relative}
+header nav:after{content:'';position:absolute;z-index:1;bottom:0;left:0;min-width:100%;height:56px;background:rgba(0,0,0,.1)}
+header.sliding nav{height:56px}
+header.sliding .brand-logo{position:relative;font-size:2.5rem;text-shadow:-2px 2px 0 #00e6e6,-5px 5px 0 #01cccc,-7px 7px 0 #00bdbd;z-index:15}
+header.sliding .side-nav{-webkit-box-pack:end;-webkit-justify-content:flex-end;-ms-flex-pack:end;justify-content:flex-end}
+.appearing{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-transition:-webkit-transform .3s cubic-bezier(.55,0,.1,1),box-shadow 2s cubic-bezier(.55,0,.1,1);transition:transform .3s cubic-bezier(.55,0,.1,1),box-shadow 2s cubic-bezier(.55,0,.1,1)}
+.appearing.active{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.questions .btn-floating i{-webkit-transition:all .25s ease;transition:all .25s ease}
+.questions .btn-floating.active i{color:rgba(0,0,0,.2)}
+header .profile{position:absolute;bottom:13px;right:-20px;z-index:11}
+@-webkit-keyframes appear{from{opacity:0;-webkit-transform:translateY(-100px);transform:translateY(-100px)}
+to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+}
+@keyframes appear{from{opacity:0;-webkit-transform:translateY(-100px);transform:translateY(-100px)}
+to{opacity:1;-webkit-transform:translateY(0);transform:translateY(0)}
+}
+.banner{width:100%;background:url(../img/banner.jpg)50% 50%/cover no-repeat fixed}
+.banner .content{-webkit-transition:all 1s cubic-bezier(.55,0,.1,1);transition:all 1s cubic-bezier(.55,0,.1,1);will-change:transform,opacity;width:90%;opacity:0;margin:auto;padding:6rem 0 4rem;-webkit-animation:appear 2s cubic-bezier(.55,0,.1,1).1s forwards;animation:appear 2s cubic-bezier(.55,0,.1,1).1s forwards}
+.banner .content>*{color:#EEE;text-align:center}
+.banner .content>:not(.btn-large){text-shadow:1px 1px 3px rgba(0,0,0,.3)}

@@ -1,0 +1,221 @@
+@timing: cubic-bezier(.55,0,.1,1);
+
+body {
+	background: #EEE;
+}
+
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.pull-right {
+	display: block;
+	float: right;
+}
+.text-center {
+	text-align: center;
+}
+.pull-left {
+	display: block;
+	float: left;
+}
+.jumbotron {
+	padding: 20px;
+	background: #fff;
+	border-radius: 3px;
+	& + * {
+		margin-top: 20px;
+	}
+}
+// .navbar {
+// 	.navbar-form {
+// 		input {
+// 			background: rgba(0, 0, 0, 0);
+// 			border-bottom: 1px solid rgba(255, 255, 255, 0.843137);
+// 		}
+// 	}
+// }
+
+textarea {
+	max-width: 100%;
+}
+
+// header
+header {
+	nav {
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			left: 0;
+			min-width: 100%;
+			height: 56px;
+			background: rgba(0, 0, 0, 0.1);
+		}
+		.nav-wrapper {
+			text-align: center;
+		}
+	}
+	&.sliding {
+		nav {
+			height: 56px;
+		}
+		.brand-logo {
+			position: relative;
+			font-size: 2.5rem;
+		 	text-shadow: -2px 2px 0px #00e6e6,
+                 -5px 5px 0px #01cccc,
+                 -7px 7px 0px #00bdbd;
+      // position: abs
+      // left: 0;
+      // bottom: 10px;
+      // width: 100px;
+      // transform: translate3d(-321%,0,0);
+      z-index: 15;
+		}
+		.side-nav {
+			justify-content: flex-end;
+		}
+	}
+} 
+.space(@offset, @current) {
+	
+}
+
+// header {
+// 	background: #00BCD4;
+// 	padding: 115px 16px 0;
+// 	height: 256px;
+// 	position: relative;
+// 	transition: .3s @timing; 
+// 	.container {
+// 		position: relative;
+// 	}
+// 	.buttons-block {
+// 		position: absolute;
+// 		bottom: -25px;
+// 		right: -100px;
+// 		& > .btn {
+// 			position: relative;
+// 			z-index: 9;
+// 			transition: box-shadow .3s @timing;
+// 			&:before {
+// 				transition: transform .3s @timing;
+// 			}
+// 			// &.active {
+// 			// 	&:before {
+// 			// 		transform: rotate(180deg);
+// 			// 	}
+// 			// }
+// 		}
+// 		.sub {
+// 			position: absolute;
+// 			.btn {
+// 				transform: scale(0);
+// 				transition: .3s @timing; 
+// 				margin-top: 10px;	
+// 				&.active {
+// 					transform: scale(1);
+// 				}
+// 			}
+// 		}
+// 	}
+// 	&.sliding {
+// 		padding-top: 0;
+// 		padding-left: 0;
+// 		z-index: 5;
+// 		// height: 56px;
+// 		top: -200px;
+// 		position: fixed;
+// 		width: 100%;
+// 		.container {
+// 			top: 200px;
+// 		}
+// 		h1 {
+// 			margin-bottom: 10px;
+// 			font-size: 24px;
+// 			.breadcrumbs {
+// 				opacity: 1;
+// 			}
+// 		}
+// 	}
+// 	h1 {
+// 		font-size: 56px;
+// 		margin-bottom: 60px;
+// 		transition: .3s @timing;
+// 		color: #fff;
+// 	}
+// }
+
+
+.appearing {
+	transform: scale(0);
+	transition: transform .3s @timing, box-shadow 2s @timing;
+	&.active {
+		transform: scale(1);
+	}
+}
+.questions .btn-floating {
+	i {
+    transition: all .25s ease;
+	}
+	&.active {
+		i {
+			color: rgba(0,0,0,0.2);
+		}
+	}
+}
+
+// header dropdown menu
+header .profile {
+	position: absolute;
+	bottom: 13px;
+	right: -20px;
+	z-index: 11;
+}
+
+// banner
+@keyframes appear {
+ from {
+ 	opacity: 0;
+ 	transform: translateY(-100px);
+ }
+ to {
+ 	opacity: 1;
+ 	transform: translateY(0);
+ }
+}
+
+.banner {
+	// height: 
+	width: 100%;
+	background: url(../img/banner.jpg) 50% 50%/cover no-repeat;
+	background-attachment: fixed;
+	// margin-top: -3rem;
+	.content {
+		transition: all 1s @timing;
+		will-change: transform, opacity;
+		width: 90%;
+		opacity: 0;
+		margin: auto;
+		padding: 6rem 0 4rem;
+		text-align: center;
+		animation: appear 2s @timing .1s forwards;
+		&> * {
+			color: #EEE;
+			text-align: center;
+			&:not(.btn-large) {
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+<html>
+<head>
+	<link href="materialize/css/materialize.css" rel="stylesheet">
+	<link rel="stylesheet" href="dst/css/global.css">
+	<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
+  <script src="dst/js/main.js" type="text/javascript" charset="utf-8" async defer></script>
+</head>
+<body>
+	<!-- <header>
+		<div class="container">
+			<h1 class="btn-material-white">Войдите в аккаунт</h1>
+			<div class="buttons-block">
+				<button class="btn toggle btn-material-yellow-400 btn-fab btn-raised mdi-action-list"></button>
+				<div class="sub">
+					<button class="btn btn-material-yellow-400 btn-fab btn-raised mdi-action-home"></button>
+					<button class="btn btn-material-yellow-400 btn-fab btn-raised mdi-content-create"></button>
+					<button class="btn btn-material-yellow-400 btn-fab btn-raised mdi-hardware-keyboard-arrow-down"></button>
+				</div>
+			</div>
+		</div>
+	</header> -->
+	<header class="navbar-fixed">
+	 	<nav>
+      <div class="nav-wrapper container">
+        <a href="/index.html" class="brand-logo">Tests</a>
+        <ul id="nav-mobile" class="side-nav">
+          <li><a href="sass.html">My profile</a></li>
+          <li><a href="components.html">My tests</a></li>
+          <li><a href="javascript.html">Contacts</a></li>
+        </ul>
+
+        <!-- Include this line below -->
+        <a class="button-collapse" href="#" data-activates="nav-mobile"><i class="mdi-navigation-menu"></i></a>
+        <!-- End -->
+
+      </div>
+    </nav>
+  </header>
+	<main class="container">
+		<div class="row">
+		<br><br>
+			<div class="col-12-xs">
+				<div class="jumbotron z-depth-2">
+					<form action="GET" class="form-horizontal">
+						<fieldset>
+						<!-- <h1>Выполните вход</h1> -->
+		            <!-- <div class="col s12"> -->
+			            <div class="input-field col s12">
+						        <input id="username" type="text" class="validate">
+						        <label for="username">Username</label>
+						      </div>
+						      <div class="input-field col s12">
+						        <input id="pass" type="password" class="validate">
+						        <label for="pass">Password</label>
+						      </div>
+	                <div class=" col s12">
+                   	<input type="checkbox" id="test5" />
+    								<label for="test5">Запонить</label>
+    								<br><br>
+	                </div>
+		                <button class="btn waves-effect waves-light" type="submit" name="action">Submit<i class="mdi-content-send right"></i></button>
+		                <button type="reset" class="waves-effect waves-teal btn-flat">Забыл пароль</button>
+		                <button type="reset" class="waves-effect waves-teal btn-flat">Регистрация</button>
+		            <!-- </div> -->
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</main>
+	<footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
